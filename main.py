@@ -2,7 +2,7 @@ import logging
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 from src.run import run
 
@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.getenv('TOKEN')
+
 if __name__ == '__main__':
-    print("RUNNING")
+    print("RUNNING", TOKEN, PORT)
     run(TOKEN, PORT)
