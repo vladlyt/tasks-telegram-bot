@@ -1,8 +1,8 @@
 from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler
 
-from src.db import Session
-from src.models import User
+from db import Session
+from models import User
 
 
 def register_user(update: Update, context: CallbackContext):

@@ -5,8 +5,8 @@ from enum import auto, IntEnum
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import CallbackContext, CommandHandler, MessageHandler, Filters, ConversationHandler
 
-from src.db import Session
-from src.models import Task
+from db import Session
+from models import Task
 
 logger = logging.getLogger(__name__)
 

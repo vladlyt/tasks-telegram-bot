@@ -3,9 +3,9 @@ import datetime
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import CallbackContext
 
-from src.handlers.tasks.show import TaskCompletion
-from src.models import User, Task
-from src.db import Session
+from handlers.tasks.show import TaskCompletion
+from models import User, Task
+from db import Session
 
 
 def today_tasks(context: CallbackContext):

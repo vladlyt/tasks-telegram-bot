@@ -2,6 +2,10 @@
 
 ---
 
+This is just an example for courses 
+
+---
+
 To install requirements run: 
 
 
