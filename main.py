@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from src.run import run
+from src.create_db import create_db
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -16,5 +17,5 @@ PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.getenv('TOKEN')
 
 if __name__ == '__main__':
-    print("RUNNING", TOKEN, PORT)
+    create_db()
     run(TOKEN, PORT)
