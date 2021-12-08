@@ -25,9 +25,11 @@ def run(token, port):
 
     job_queue.run_daily(today_tasks, days=tuple(range(7)), time=datetime.time(hour=8, minute=0, second=0))
 
-    updater.start_webhook(listen="0.0.0.0",
-                          port=port,
-                          url_path=token)
-    updater.bot.setWebhook(f'https://task-telegram.herokuapp.com/{token}')
+    updater.start_webhook(
+        listen="0.0.0.0",
+        port=port,
+        url_path=token,
+        webhook_url=f'https://task-telegram.herokuapp.com/{token}',
+    )
 
     updater.idle()
